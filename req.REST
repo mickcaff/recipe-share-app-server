@@ -1,0 +1,73 @@
+### Post User
+
+POST http://localhost:5500/api/user
+Content-Type: application/json
+
+{
+    "email": "test1@email.com",
+    "firstName": "Joe",
+    "lastName": "Bloe",
+    "password": "pwordtest1"
+}
+
+### Get Use
+
+GET http://localhost:5500/api/users
+Content-Type: application/json
+
+### Update User
+
+PUT http://localhost:5500/api/user/6324069e8f13750ffdc9e768
+Content-Type: application/json
+
+{
+    "email": "test1@email.comUpdated",
+    "firstName": "JoeUpdated",
+    "lastName": "BloeUpdated",
+    "password": "pwordtest1updated"
+}
+
+### Delete User
+
+DELETE http://localhost:5500/api/user/6324069e8f13750ffdc9e768
+Content-Type: application/json
+
+### Post Recipe
+
+POST http://localhost:5500/api/recipe
+Content-Type: application/json
+
+{
+    "title": "Test Recipe",
+    "category": "dinner",
+    "serves": 4,
+    "description": "simple dinner that serves 4",
+    "ingredients": [{ "amount": 3, "unit": "cups", "ingredient": "sugar" }, { "amount": 2, "unit": "tsp", "ingredient": "baking powder" }],
+    "method": [{ "step": "This is step 1" }, { "step": "This is step 2" }],
+    "notes": "small additional note",
+    "public": true,
+    "user": "632407e9130233a78a37252d"
+}
+
+### Get Recipes
+
+GET http://localhost:5500/api/recipes
+Content-Type: application/json
+
+### Update Recipe
+
+PUT http://localhost:5500/api/recipe/63465cca02dbf2ce63ea822e
+Content-Type: application/json
+
+{
+    "title": "Test Recipe Updated",
+      "ingredients": [{ "amount": 3, "unit": "cups", "ingredient": "sugar" }, { "amount": 2, "unit": "tsp", "ingredient": "baking powder" }],
+      "method": [{ "step": "This is step 1 udpated" }, { "step": "This is step 2" }],
+      "public": false,
+      "user": "632407e9130233a78a37252d"
+}
+
+### Delete Recipes
+
+DELETE http://localhost:5500/api/recipe/63465cca02dbf2ce63ea822e
+Content-Type: application/json
